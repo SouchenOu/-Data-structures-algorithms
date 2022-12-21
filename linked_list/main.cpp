@@ -70,6 +70,19 @@ void count()
     cout << "number of nodes here is :" << cmp << "\n";
 }
 
+/****Write a C++ program to insert a new node at the beginning of a Singly Linked List.**/
+
+void insert_at_first(int num)
+{
+    struct Node *new_node = new Node;
+    new_node->number = num;
+    new_node->next = head;
+    head = new_node;
+    
+
+
+}
+
 
 int main()
 {
@@ -82,6 +95,8 @@ int main()
     cout << "after reverse\n";
     display_all_nodes();
     count();
+    insert_at_first(100);
+    display_all_nodes();
     return 0;
 }
 /*int main()
