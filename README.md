@@ -27,8 +27,8 @@ Non-linear data structures: Elements are not arranged sequentially, but are stor
 
 7: Trees
 
-  1: Binary trees
+    1: Binary trees
   
-  2: Binary search trees
+    2: Binary search trees
   
-  3: Tries
+    3: Tries
