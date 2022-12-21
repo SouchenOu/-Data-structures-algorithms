@@ -38,7 +38,6 @@ void display_all_nodes()
         temp = temp->next;
     }
 }
-
 /*************Write a C++ program to create a singly linked list of n nodes and display it in reverse order******************/
 void reverce_list()
 {
@@ -53,12 +52,24 @@ void reverce_list()
        // cout << prev->number << "\n";
         current_node = next;
         
-        //cout << "next next current" << prev->next->number << "\n";
-
+        //cout << "next next current" << prev->next->number << "\n"
     }
     head = prev;
-
 }
+/************Write a C++ program to create a singly linked list of n nodes and count the number of nodes***************/
+
+void count()
+{
+    struct Node* p = head;
+    int cmp = 0;
+    while(p != NULL)
+    {
+        cmp++;
+        p = p->next;
+    }
+    cout << "number of nodes here is :" << cmp << "\n";
+}
+
 
 int main()
 {
@@ -70,6 +81,7 @@ int main()
     reverce_list();
     cout << "after reverse\n";
     display_all_nodes();
+    count();
     return 0;
 }
 /*int main()
