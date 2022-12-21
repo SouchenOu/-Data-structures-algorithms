@@ -38,11 +38,54 @@ void display_all_nodes()
         temp = temp->next;
     }
 }
+
+/*************Write a C++ program to create a singly linked list of n nodes and display it in reverse order******************/
+void reverce_list()
+{
+    Node* current_node = head;
+    Node* prev = NULL, *next = NULL;
+    while(current_node != NULL)
+    {
+        //cout << "times\n";
+        next = current_node->next;
+        current_node->next = prev;
+        prev = current_node;
+       // cout << prev->number << "\n";
+        current_node = next;
+        
+        //cout << "next next current" << prev->next->number << "\n";
+
+    }
+    head = prev;
+
+}
+
 int main()
 {
     insert_node(1);
     insert_node(2);
     insert_node(3);
+    
+    display_all_nodes();
+    reverce_list();
+    cout << "after reverse\n";
     display_all_nodes();
     return 0;
 }
+/*int main()
+{
+    struct Node *new_one = new Node;
+    new_one->number = 11;
+    new_one->next = NULL;
+    struct Node *p ;
+    new_one = p;
+   
+    insert_node(1);
+    while(p)
+    {
+        cout << p->number << "\n";
+        p = p->next;
+    }
+
+
+}*/
