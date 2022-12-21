@@ -20,6 +20,7 @@ Non-linear data structures: Elements are not arranged sequentially, but are stor
 5. Stacks and queues
 6. Strings
 7. Trees
+
   1. Binary trees
   2. Binary search trees
   3. Tries
