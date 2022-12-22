@@ -82,8 +82,20 @@ void insert_at_first(int num)
 
 
 }
-
-
+/**************Write a C++ program to insert a new node at the end of a Singly Linked List.****************/
+void insert_end(int num)
+{
+    struct Node *new_node = new Node;
+    struct Node *point;
+    point = head;
+    while(point->next != NULL)
+    {
+        point = point->next;
+    }
+    point->next= new_node;
+    new_node->number = num;
+    new_node->next = NULL;
+}
 int main()
 {
     insert_node(1);
@@ -95,7 +107,11 @@ int main()
     cout << "after reverse\n";
     display_all_nodes();
     count();
+    cout << "insert in first\n";
     insert_at_first(100);
+    display_all_nodes();
+    cout << "insert at end\n";
+    insert_end(200);
     display_all_nodes();
     return 0;
 }
