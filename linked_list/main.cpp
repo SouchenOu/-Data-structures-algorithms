@@ -96,6 +96,41 @@ void insert_end(int num)
     new_node->number = num;
     new_node->next = NULL;
 }
+//Write a program in C to insert a new node at the middle of Singly Linked List
+
+void insert_middle(int num)
+{
+    struct Node * new_one = new Node;
+    struct Node *test;
+    struct Node *test2;
+    int cmp = 0;
+    int cpm2 = 0;
+    test = head;
+    while(test != NULL)
+    {
+        test= test->next;
+        cmp++;
+    }
+    cmp = cmp/2;
+    test = head;
+    while(test != NULL)
+    {
+        if(cpm2 == cmp)
+        {
+            break ;
+        }
+        cpm2++;
+        test = test->next;
+    }
+    test->next = test2;
+    new_one->number = num; 
+    test->next =  new_one;
+    new_one->next = test2;*/
+
+
+    
+
+}
 int main()
 {
     insert_node(1);
@@ -112,6 +147,9 @@ int main()
     display_all_nodes();
     cout << "insert at end\n";
     insert_end(200);
+    display_all_nodes();
+    cout << "Insert middle\n";
+    insert_middle(300);
     display_all_nodes();
     return 0;
 }
