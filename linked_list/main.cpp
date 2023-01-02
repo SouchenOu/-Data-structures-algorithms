@@ -288,17 +288,32 @@ void remove_element_using_pos(int num)
 
 }
 
-void remove_node_pos(int num)
+//Remove the Nnd node from the end of the said list: Updated list:
+void remove_node_from_last(int num)
 {
-    int cmp = 0;
-    int cmp2 = 1;
-    struct Node *test = new Node;
-    test = head;
-    while(test!= NULL)
+    // first thing i will reverce my list
+    struct Node *elem = new Node;
+    struct Node *elem1 = new Node;
+    struct Node *elem2 = new Node;
+    struct Node *nextOne = new Node;
+
+
+    elem = head;
+    elem2 = head;
+    while(num != 0)
     {
-        test = test->next;
-        cmp++;
+        elem = elem->next;
+        num--;
+
     }
+
+    while(elem->next != NULL)
+    {
+        elem = elem->next;
+        elem2 = elem2->next;
+    }
+
+    elem2->next = elem;  
 }
 int main()
 {
@@ -308,6 +323,7 @@ int main()
     insert_node(4);
     insert_node(5);
     insert_node(6);
+    insert_node(7);
    
     
     display_all_nodes();
@@ -339,6 +355,9 @@ int main()
     display_all_nodes();
     cout << "Delete an element by using his position\n";
     remove_element_using_pos(4);
+    display_all_nodes();
+    cout <<"remove node starting at the end\n";
+    remove_node_from_last(2);
     display_all_nodes();
 
     return 0;
