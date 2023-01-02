@@ -104,7 +104,7 @@ void insert_middle(int num)
     struct Node *test;
     struct Node *test2;
     int cmp = 0;
-    int cpm2 = 0;
+    int cpm2 = 1;
     test = head;
     while(test != NULL)
     {
@@ -122,10 +122,11 @@ void insert_middle(int num)
         cpm2++;
         test = test->next;
     }
-    test->next = test2;
+    test2 = test->next;
+    std::cout<< "test = " << test2->number << "\n";
     new_one->number = num; 
     test->next =  new_one;
-    new_one->next = test2;*/
+    new_one->next = test2;
 
 
     
