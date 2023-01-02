@@ -156,6 +156,42 @@ void find_middle()
         std::cout << "Our middle element is : " << first->number << "\n";
 
 }
+//Write a C++ program to get Nth node in a given Singly Linked List.
+// get the position of every element in linked list
+
+void search_element(int num)
+{
+    int cmp;
+    cmp = 1;
+    struct Node *element = new Node;
+
+    element = head;
+    while(element != NULL)
+    {
+        if(cmp == num)
+        {
+            cout << "Position: " << num << "\n";
+            cout << "Value: " << element->number << "\n";
+            break ;
+        }
+        element= element->next;
+        cmp++;
+    }
+}
+
+//Write a C++ program to delete first node of a given Singly Linked List.
+
+void delete_first_node()
+{
+    struct Node *test;
+    if(head != NULL)
+    {
+        test = head;
+        head = head->next;
+        free(test);
+    }
+
+}
 
 
 int main()
@@ -180,6 +216,11 @@ int main()
     display_all_nodes();
     cout<< "Find middle element\n";
     find_middle();
+    cout<< "Find the value of this position :\n";
+    search_element(7);
+    cout << "Delete the first element\n";
+    delete_first_node();
+    display_all_nodes();
     return 0;
 }
 /*int main()
