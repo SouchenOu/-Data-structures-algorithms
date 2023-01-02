@@ -228,12 +228,50 @@ void delete_middle()
      N2->next = N3;
 
 }
+//Write a C++ program to delete the last node of a Singly Linked List
+
+void delete_last()
+{
+    struct Node *element = new Node;
+    int cmp = 0;
+    int cmp2 = 1;
+    element = head;
+    while(element != NULL)
+    {
+        cmp++;
+        element = element->next;
+       
+    }
+    cmp--;
+    element = head;
+    while(element != NULL)
+    {
+        if((cmp - 1) == cmp2)
+        {
+            element = element->next;
+            element->next = NULL;
+            break ;
+        }
+        element = element->next;
+        cmp2++;
+    }
+    /*while(head != NULL)
+    {
+        cout << "head = " << head->number << "\n";
+        head=head->next;
+    }*/
+
+
+}
+
 int main()
 {
     insert_node(1);
     insert_node(2);
     insert_node(3);
     insert_node(4);
+    insert_node(5);
+    insert_node(6);
    
     
     display_all_nodes();
@@ -259,6 +297,9 @@ int main()
     display_all_nodes();
     cout << "Delete middle element\n";
     delete_middle();
+    display_all_nodes();
+    cout << "Delete the last one \n";
+    delete_last();
     display_all_nodes();
     return 0;
 }
