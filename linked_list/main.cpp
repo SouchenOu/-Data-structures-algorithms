@@ -123,15 +123,41 @@ void insert_middle(int num)
         test = test->next;
     }
     test2 = test->next;
-    std::cout<< "test = " << test2->number << "\n";
     new_one->number = num; 
     test->next =  new_one;
     new_one->next = test2;
+}
 
-
-    
+//  Write a C++ program to find the middle element of a given
+void find_middle()
+{
+        struct Node * first = new Node;
+        first = head;
+        int cmp;
+        int cmp2;
+        cmp = 0;
+        cmp2 = 1;
+        while(first != NULL)
+        {
+            cmp++;
+            first= first->next;
+        }
+        cmp = cmp / 2;
+        first = head;
+        while(first != NULL)
+        {
+            if(cmp2 == cmp)
+            {
+                break ;
+            }
+            first = first->next;
+            cmp2++;
+        }
+        std::cout << "Our middle element is : " << first->number << "\n";
 
 }
+
+
 int main()
 {
     insert_node(1);
@@ -152,6 +178,8 @@ int main()
     cout << "Insert middle\n";
     insert_middle(300);
     display_all_nodes();
+    cout<< "Find middle element\n";
+    find_middle();
     return 0;
 }
 /*int main()
