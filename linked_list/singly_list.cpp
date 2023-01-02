@@ -10,6 +10,13 @@ However, in a linked list, each node points to the next one such that data can e
 
 using namespace std;
 
+
+
+
+
+
+/********* Singly Linked List*************/
+
 /************** ex1  Write a C++ program to create and display a Singly Linked List***********/
 
 struct Node {
@@ -296,15 +303,12 @@ void remove_node_from_last(int num)
     struct Node *elem1 = new Node;
     struct Node *elem2 = new Node;
     struct Node *nextOne = new Node;
-
-
     elem = head;
     elem2 = head;
     while(num != 0)
     {
         elem = elem->next;
         num--;
-
     }
 
     while(elem->next != NULL)
@@ -315,6 +319,8 @@ void remove_node_from_last(int num)
 
     elem2->next = elem;  
 }
+
+
 int main()
 {
     insert_node(1);
@@ -359,6 +365,5 @@ int main()
     cout <<"remove node starting at the end\n";
     remove_node_from_last(2);
     display_all_nodes();
-
     return 0;
 }
