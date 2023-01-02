@@ -143,11 +143,13 @@ void find_middle()
             first= first->next;
         }
         cmp = cmp / 2;
+        cout << "here cmp = " << cmp << "\n";
         first = head;
         while(first != NULL)
         {
             if(cmp2 == cmp)
             {
+                first = first->next;
                 break ;
             }
             first = first->next;
@@ -192,13 +194,47 @@ void delete_first_node()
     }
 
 }
+// Write a C++ program to delete a node from the middle of Singly Linked List
 
+void delete_middle()
+{
+     int cmp;
+     int cmp2;
+     cmp = 0;
+     cmp2 = 1;
+     struct Node *N = new Node;
+     struct Node *N2 = new Node;
+     struct Node *N3 = new Node;
+     N = head;
+     while( N != NULL)
+     {
+        N= N->next;
+        cmp++;
+     }
+     cmp = cmp / 2;
+     N = head;
+     while(N != NULL)
+     {
+        if(cmp2 + 1 == cmp)
+        {
+            N2 = N;
+            N = N->next;
+            break ;
+        }
+        N=N->next;
+        cmp2++;
+     }
+     N3 = N->next;
+     N2->next = N3;
 
+}
 int main()
 {
     insert_node(1);
     insert_node(2);
     insert_node(3);
+    insert_node(4);
+   
     
     display_all_nodes();
     reverce_list();
@@ -221,22 +257,8 @@ int main()
     cout << "Delete the first element\n";
     delete_first_node();
     display_all_nodes();
+    cout << "Delete middle element\n";
+    delete_middle();
+    display_all_nodes();
     return 0;
 }
-/*int main()
-{
-    struct Node *new_one = new Node;
-    new_one->number = 11;
-    new_one->next = NULL;
-    struct Node *p ;
-    new_one = p;
-   
-    insert_node(1);
-    while(p)
-    {
-        cout << p->number << "\n";
-        p = p->next;
-    }
-
-
-}*/
