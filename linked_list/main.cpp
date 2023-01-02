@@ -78,9 +78,6 @@ void insert_at_first(int num)
     new_node->number = num;
     new_node->next = head;
     head = new_node;
-    
-
-
 }
 /**************Write a C++ program to insert a new node at the end of a Singly Linked List.****************/
 void insert_end(int num)
@@ -263,7 +260,46 @@ void delete_last()
 
 
 }
+// Write a C++ program to delete the nth node of a Singly Linked List from the end.
+// remove an element by using his position
+void remove_element_using_pos(int num)
+{
+    int cmp;
+    cmp = 1;
+    // i should check the first element
+    struct Node *test = new Node;
+    struct Node *test2 = new Node;
+    struct Node *test3 = new Node;
+    test = head;
+    while(test != NULL)
+    {
+        if(cmp + 1 == num)
+        {
+            test2 = test;
+            test = test->next;
+            test3 = test->next;
+            break ;
+        }
+        test = test->next;
+        cmp++;
+    }
+    test2->next = test3;
 
+
+}
+
+void remove_node_pos(int num)
+{
+    int cmp = 0;
+    int cmp2 = 1;
+    struct Node *test = new Node;
+    test = head;
+    while(test!= NULL)
+    {
+        test = test->next;
+        cmp++;
+    }
+}
 int main()
 {
     insert_node(1);
@@ -301,5 +337,9 @@ int main()
     cout << "Delete the last one \n";
     delete_last();
     display_all_nodes();
+    cout << "Delete an element by using his position\n";
+    remove_element_using_pos(4);
+    display_all_nodes();
+
     return 0;
 }
