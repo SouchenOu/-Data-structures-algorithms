@@ -115,6 +115,33 @@ void insert_at_end(string data)
     newElement->next = NULL;
 
 }
+//Write a C++ program to find the middle element of a given Doubly Linked List.
+void find_middle_element()
+{
+    int cmp ;
+    int cmp2 = 1;
+    cmp = 0;
+    struct Node * elem = new Node;
+    elem = head;
+    while(elem != NULL)
+    {
+        elem = elem->next;
+        cmp++;
+    }
+    cmp = cmp / 2;
+    elem = head;
+    while(elem != NULL)
+    {
+        if(cmp2 == cmp)
+        {
+            cout << "Middle element is :" << elem->data << "\n";
+            break ;
+        }
+        elem = elem->next;
+        cmp2++;
+    }
+
+}
 int main()
 {
     create_double_list("souka");
@@ -122,6 +149,7 @@ int main()
     create_double_list("fati");
     create_double_list("1337");
     create_double_list("64");
+    create_double_list("42");
     DisplayList();
     cout << "****After reverse :\n";
     reverse_order();
@@ -132,6 +160,9 @@ int main()
     DisplayList();
     cout << "insert at the end :\n";
     insert_at_end("soukaina ouchen");
+    DisplayList();
+    cout << "Find middle element \n";
+    find_middle_element();
     DisplayList();
     return 0;
 }
