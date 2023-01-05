@@ -99,7 +99,22 @@ void insert_at_beginning(string num)
 
 }
 //Write a C++ program to insert a new node at the end of a Doubly Linked List.
+void insert_at_end(string data)
+{
+    struct Node * elemen = new Node;
+    struct Node *newElement = new Node;
+    elemen = head;
+    while(elemen->next != NULL)
+    {
+        elemen = elemen->next;
+    }
+    cout << "last one is :" << elemen->data << "\n";
+    elemen->next = newElement;
+    newElement->prev = elemen;
+    newElement->data = data;
+    newElement->next = NULL;
 
+}
 int main()
 {
     create_double_list("souka");
@@ -114,6 +129,9 @@ int main()
     DisplayList();
     cout << "Insert at beginning :\n";
     insert_at_beginning("ouchen");
+    DisplayList();
+    cout << "insert at the end :\n";
+    insert_at_end("soukaina ouchen");
     DisplayList();
     return 0;
 }
