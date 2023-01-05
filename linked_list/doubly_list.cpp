@@ -51,14 +51,40 @@ void reverse_order()
     {
             tmp = test1->prev;
             test1->prev = test1->next;
+            //cout << "next test1" << test1->next->data << "\n";
             test1->next = tmp;
-            test1 =test1->prev;
-            break ;
+            test1 =test1->prev;     
     }
     if(tmp != NULL)
         head = tmp->prev;
 
 }
+//other method
+/*void reverse()
+{
+    struct Node *test1 = new Node;
+    struct Node *test2 = new Node;
+    struct Node * tmp = new Node;
+    struct Node *tmp2 = new Node;
+    test1 = head;
+    test2 = head;
+    while(test2->next != NULL)
+    {
+        test2 = test2->next;
+    }
+    while(test1 != NULL)
+    {
+        tmp = test2;
+        test2 = test1;
+        test1 = tmp;
+        cout << "test1 = " << test1->data << "\n";
+        cout << "test2 = " << test2->data << "\n";
+        test1 = test1->next;
+        test2 = test2->prev;
+        
+        break ;
+    }
+}*/
 
 
 int main()
@@ -71,6 +97,7 @@ int main()
     DisplayList();
     cout << "****After reverse :\n";
     reverse_order();
+    //reverse();
     DisplayList();
     return 0;
 }
