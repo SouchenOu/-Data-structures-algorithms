@@ -85,7 +85,20 @@ void reverse_order()
         break ;
     }
 }*/
+//Write a C++ program to insert a new node at the beginning of a Doubly Linked List.
 
+void insert_at_beginning(string num)
+{
+    struct Node *test = new Node;
+    struct Node *newElement = new Node;
+    test = head;
+    newElement->data = num;
+    newElement->next = test;
+    newElement->prev = NULL;
+    head = newElement;
+
+}
+//Write a C++ program to insert a new node at the end of a Doubly Linked List.
 
 int main()
 {
@@ -98,6 +111,9 @@ int main()
     cout << "****After reverse :\n";
     reverse_order();
     //reverse();
+    DisplayList();
+    cout << "Insert at beginning :\n";
+    insert_at_beginning("ouchen");
     DisplayList();
     return 0;
 }
