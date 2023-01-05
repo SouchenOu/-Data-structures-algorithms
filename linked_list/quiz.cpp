@@ -111,6 +111,32 @@ void sum_list()
     }
    // head = list1;
 }
+// Making a sorted list from unsorted list
+void sorting_our_list()
+{
+    struct  Node *First = new Node;
+    struct Node *second = new Node;
+    struct Node *tmp;
+    First = head;
+    second = head->next;
+    while(First != NULL)
+    {
+        second = First->next;
+        while(second != NULL)
+        {
+                if(First->num > second->num)
+                {
+                    tmp = second;
+                    second = First;
+                    First = tmp;
+                }
+                second = second->next;
+        }
+        First= First->next;
+        
+    }
+}
+
 
 int main()
 {
@@ -119,7 +145,7 @@ int main()
     insert_node(2);
     insert_node(4);
     insert_node(3);
-    insert_node(2);
+    insert_node(5);
     insert_node(4);
     insert_node(11);
     insert_node(1);
@@ -131,7 +157,10 @@ int main()
     cout << "removing duplicated number\n";
     removing_dup();
     display_list();
-    cout << "SUM two lists\n";
-    sum_list();
+    //cout << "SUM two lists\n";
+    //sum_list();
+    //display_list();
+    cout << "Sorting our list \n";
+    sorting_our_list();
     display_list();
 }
