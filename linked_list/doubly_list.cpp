@@ -142,6 +142,41 @@ void find_middle_element()
     }
 
 }
+//Write a C++ program to insert a new node at the middle of a given Doubly Linked List.
+void insert_at_middle(string data)
+{
+    struct Node *elem = new Node;
+    struct Node *tmp = new Node;
+    struct Node *newElement = new Node;
+    int cmp = 0;
+    int cmp2 = 1;
+    elem = head;
+    while(elem != NULL)
+    {
+        elem = elem->next;
+        cmp++;
+    }
+    cmp = cmp / 2;
+    elem = head;
+    while(elem != NULL)
+    {
+        if(cmp2 == cmp)
+        {
+            tmp = elem->next;
+            newElement->data = data;
+            elem->next = newElement;
+            newElement->prev = elem;
+            newElement->next = tmp;
+            break ;
+        }
+        elem = elem->next;
+        cmp2++;
+    }
+
+
+
+}
+
 int main()
 {
     create_double_list("souka");
@@ -163,6 +198,9 @@ int main()
     DisplayList();
     cout << "Find middle element \n";
     find_middle_element();
+    DisplayList();
+    cout << "insert_at_middle\n";
+    insert_at_middle("finish");
     DisplayList();
     return 0;
 }
