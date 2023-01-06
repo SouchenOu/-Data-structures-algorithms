@@ -46,10 +46,30 @@ Vectors use a dynamically allocated array to store their elements, so they can c
 
 Vectors are a class that is available through a library called the Standard Template Library (STL), and one uses a < > notation to indicate the data type of the elements. In order to use vectors, One needs to include the vector library.
 
-#include <vector>
+#include<vector>
     
     
 <img width="874" alt="Screen Shot 2023-01-06 at 1 53 31 PM" src="https://user-images.githubusercontent.com/87101785/211016254-f930baf7-f980-4de4-b080-5bdb98399ec6.png">
+    
+    
+    
+    
+                using namespace std;
+
+                int main()
+                {
+
+                    vector<int> intvector;
+                    intvector.reserve(50);
+
+                    for (int i=0; i<50; i++)
+                    {
+                        intvector.push_back(i*i);
+                        cout << intvector[i] << endl;
+                    }
+                    return 0;
+                }
+
 
 
 
