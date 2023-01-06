@@ -67,7 +67,10 @@ void insert_unsorted(int num)
             {
                 if(newOne->num < OurList->num)
                 {
+                    tmp = OurList->prev;
                     OurList->prev = newOne;
+                    newOne->prev = tmp;
+                    newOne->next = OurList;
                     break ;
                 }
                 else if(OurList->next == NULL)
