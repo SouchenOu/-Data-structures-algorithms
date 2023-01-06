@@ -32,3 +32,18 @@ Non-linear data structures: Elements are not arranged sequentially, but are stor
     2: Binary search trees
   
     3: Tries
+
+
+
+
+
+
+1: vectors :
+-----------
+
+
+Vectors use a dynamically allocated array to store their elements, so they can change size, and they have other friendly features as well. Because they use a dynamically allocated array, they use contiguous storage locations which means that their elements can be accessed and traversed, and they can also be accessed randomly using indexes. However, vectors are dynamically sized, so their size can change automatically. A new element can be inserted into or deleted from any part of a vector, and automatic reallocation for other existing items in the vector will be applied. Vectors are homogeneous, so every element in the vector must be of the same type.
+
+Vectors are a class that is available through a library called the Standard Template Library (STL), and one uses a < > notation to indicate the data type of the elements. In order to use vectors, One needs to include the vector library.
+
+#include <vector>
