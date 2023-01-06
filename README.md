@@ -49,31 +49,9 @@ Vectors are a class that is available through a library called the Standard Temp
 #include <vector>
     
     
-
-Common C++ Vector Operators
-    
-Vector Operation
+<img width="874" alt="Screen Shot 2023-01-06 at 1 53 31 PM" src="https://user-images.githubusercontent.com/87101785/211016254-f930baf7-f980-4de4-b080-5bdb98399ec6.png">
 
 
-
-[ ]                  myvector[i].                 access value of element at index i
-
-=                    myvector[i] = value          assign value to element at index i
-
-push_back            myvect.push_back(item).      Appends item to the far end of the vector
-
-pop_back.            myvect.pop_back().           Deletes last item (from far end) of the vector
-
-insert.              myvect.insert(i, item).      Inserts an item at index i
-
-erase.               myvect.erase(i).             Erases an element from index i
-      
-size.                myvect.size()                Returns the actual size used by elements
-
-capacity.            myvect.capacity().           Returns the size of allocated storage capacity
-  
-
-reserve.             myvect.reserve(amount).      Request a change in capacity to amount
 
 
 
