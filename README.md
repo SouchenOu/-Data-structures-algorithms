@@ -143,4 +143,25 @@ In C++, the unordered_map implements the hash table, and the <unordered_map> lib
 
                     cout << spnumbers.size() << endl;
                 }
+    
+    
+    
+                    //shows how to iterate through a hash table in C++
+                    #include <iostream>
+                    #include <unordered_map>
+                    #include <string>
+                    using namespace std;
+
+                    int main() 
+                    {
+                        unordered_map<string, string> spnumbers;
+
+                        spnumbers = { {"one","uno"},{"two","dos"},{"three","tres"},{"four","cuatro"},{"five","cinco"} };
+
+                        for (auto i=spnumbers.begin(); i!=spnumbers.end(); i++ )
+                        {
+                                 cout << i->first << ":";
+                                 cout << i->second << endl;
+                        }
+                    }
 
