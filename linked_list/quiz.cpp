@@ -35,6 +35,64 @@ void insert_node(int num)
     head = newOne;
    
 }
+//insert unsorted list
+ struct Node *List = NULL;
+void insert_unsorted(int num)
+{
+    
+    struct Node *newOne = new Node;
+    struct Node *tmp = new Node;
+    struct Node *OurList = new Node;
+    OurList = List;
+    newOne->num = num;
+    if(List == NULL)
+    {
+        newOne->next = List;
+        newOne->prev = NULL;
+        List = newOne;
+    }
+    
+
+    else if(List != NULL)
+    {
+        if(List->num > newOne->num)
+        {
+            newOne->next = List;
+            List->prev = newOne;
+            List = newOne;
+        }else if(List->num < newOne->num)
+        {
+            OurList = List->next;
+            while(OurList != NULL)
+            {
+                if(newOne->num < OurList->num)
+                {
+                    OurList->prev = newOne;
+                    break ;
+                }
+                else if(OurList->next == NULL)
+                {
+                    OurList->next = newOne;
+                    break ;
+                }
+                OurList = OurList->next;
+            }
+        }
+    }
+
+
+}
+
+void display_sorted_liste()
+{
+    struct Node *test = new Node;
+    test = List;
+    while(test != NULL)
+    {
+        cout << test->num << "\n";
+        test = test->next;
+    }
+}
 
 void display_list()
 {
@@ -116,12 +174,18 @@ void sorting_our_list()
 {
     struct  Node *First = new Node;
     struct Node *second = new Node;
+    struct Node *test = new Node;
     struct Node *tmp;
+    test = head;
     First = head;
-    second = head->next;
+    second = test->next;
     while(First != NULL)
     {
-        second = First->next;
+        if(First->next != NULL && second == NULL)
+        {
+            test = test->next;
+            second = test;
+        }
         while(second != NULL)
         {
                 if(First->num > second->num)
@@ -129,6 +193,7 @@ void sorting_our_list()
                     tmp = second;
                     second = First;
                     First = tmp;
+                    
                 }
                 second = second->next;
         }
@@ -160,7 +225,19 @@ int main()
     //cout << "SUM two lists\n";
     //sum_list();
     //display_list();
-    cout << "Sorting our list \n";
-    sorting_our_list();
-    display_list();
+    //cout << "Sorting our list \n";
+    //sorting_our_list();
+    //display_list();
+
+    cout << "Insert insorted number\n";
+    cout << "*************************\n";
+    insert_unsorted(11);
+    insert_unsorted(2);
+    insert_unsorted(13);
+    insert_unsorted(0);
+    insert_unsorted(3);
+    insert_unsorted(33);
+    insert_unsorted(8);
+    display_sorted_liste();
+    
 }
