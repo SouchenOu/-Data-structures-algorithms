@@ -165,3 +165,15 @@ In C++, the unordered_map implements the hash table, and the <unordered_map> lib
                         }
                     }
 
+    
+            Result:
+    
+                five:cinco
+    
+                four:cuatro
+    
+                three:tres
+    
+                two:dos
+    
+                one:uno
