@@ -101,6 +101,13 @@ Vectors are a class that is available through a library called the Standard Temp
                     return 0;
                 }
 
+    
+    
+            Result:
+    
+            Hello World!
+    
+            World! begins at 6
 
 
 
