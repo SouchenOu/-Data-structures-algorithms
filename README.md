@@ -109,5 +109,38 @@ Vectors are a class that is available through a library called the Standard Temp
     
             World! begins at 6
 
+3:  Hash Tables:
+---------------
+    
+    
+    A hash table is a collection of associated pairs of items where each pair consists of a key and a value. Hash tables are often called the more general term map because the associated hash function “maps” the key to the value. Nevertheless, it is better to use the more precise term, hash table because other kinds of maps are sometimes implemented with a different underlying data structure.
 
+Each hash table has a hash function which given the key as input to the hash function returns the location of the associated value as the output. This makes look up fast.
+
+In C++, the unordered_map implements the hash table, and the <unordered_map> library must be included as follows:
+
+#include <unordered_map>
+    
+
+    
+                //shows how hash tables can be used in C++
+                #include <iostream>
+                #include <unordered_map>
+                #include <string>
+                using namespace std;
+
+                int main() 
+                {
+                    unordered_map<string, string> spnumbers;
+
+                    spnumbers = { {"one", "uno"}, {"two", "dos"} };
+    
+                    spnumbers["three"] = "tres";
+                    spnumbers["four"] = "cuatro";
+
+                    cout << "one is ";
+                    cout << spnumbers["one"] << endl;
+
+                    cout << spnumbers.size() << endl;
+                }
 
