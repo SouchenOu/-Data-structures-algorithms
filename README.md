@@ -71,6 +71,35 @@ Vectors are a class that is available through a library called the Standard Temp
                 }
 
 
+2: Strings:
+-----------
+                                                    
+     Strings are sequential collections of zero or more characters such as letters, numbers and other symbols. There are actually two types of strings in C++ . The C++ string or just string from the <string> library is the more modern type. The old style C-string which is essentially an array of char type. The char type itself is actually distinct from both types of strings.        
+    
+    
+    <img width="883" alt="Screen Shot 2023-01-06 at 2 32 51 PM" src="https://user-images.githubusercontent.com/87101785/211022498-fb26c89a-e8de-4f95-b568-7e146c33781d.png">
+
+                    
+                //shows basic string usage in C++
+                #include <iostream>
+                #include <string>
+                using namespace std;
+
+                int main()
+                {
+
+                    string mystring1 = "Hello";
+                    string mystring2 = "World!";
+                    string mystring3;
+
+                    mystring3 = mystring1 + " " + mystring2;
+                    cout << mystring3 << endl;
+
+                    cout << mystring2 << " begins at ";
+                    cout << mystring3.find(mystring2) << endl;
+
+                    return 0;
+                }
 
 
 
