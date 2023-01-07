@@ -222,7 +222,8 @@ Many examples of stacks occur in everyday situations. Almost any cafeteria has a
 
    
 
-    <img width="883" alt="Screen Shot 2023-01-07 at 11 38 31 AM" src="https://user-images.githubusercontent.com/87101785/211146218-aacc13b3-df14-4e9c-a49b-2ea5b95ca7dd.png">
+   
+<img width="883" alt="Screen Shot 2023-01-07 at 11 38 31 AM" src="https://user-images.githubusercontent.com/87101785/211146237-c6cc66ba-49c8-4cd8-acc5-cc7062e80d26.png">
 
     
     
