@@ -35,4 +35,4 @@ int main() {
         cout << i->first << ":";
         cout << i->second << endl;
     }
-}
+};
