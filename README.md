@@ -246,8 +246,7 @@ size() returns the number of items on the stack. It needs no parameters and retu
 
 For example, if s is a stack that has been created and starts out empty, then Table 1 shows the results of a sequence of stack operations. Under stack contents, the top item is listed at the far right.
     
-    
-    <img width="883" alt="Screen Shot 2023-01-07 at 11 47 32 AM" src="https://user-images.githubusercontent.com/87101785/211146453-d782a261-0692-4a9f-8e24-0837863556e7.png">
+<img width="883" alt="Screen Shot 2023-01-07 at 11 47 32 AM" src="https://user-images.githubusercontent.com/87101785/211146453-d782a261-0692-4a9f-8e24-0837863556e7.png">
     
     
     1.3:Using a Stack in C++:
@@ -310,7 +309,7 @@ The following stack implementation (ActiveCode 1) assumes that the end of the ar
  2.2: Conversion of Infix Expressions to Prefix and Postfix
  
  
-     <img width="883" alt="Screen Shot 2023-01-07 at 2 42 49 PM" src="https://user-images.githubusercontent.com/87101785/211153771-106814a1-610f-4b79-aa5f-e6e3b5b18d66.png">
+<img width="883" alt="Screen Shot 2023-01-07 at 2 42 49 PM" src="https://user-images.githubusercontent.com/87101785/211153771-106814a1-610f-4b79-aa5f-e6e3b5b18d66.png">
 
      
      
