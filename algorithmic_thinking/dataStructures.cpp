@@ -1,4 +1,8 @@
 #include <iostream>
+#include <iostream>
+#include <unordered_map>
+#include <string>
+using namespace std;
 
 /****Objectives
  * 
@@ -18,7 +22,17 @@ To learn to traverse and to implement linked data structures such as linked list
 
 */
 
-int main()
-{
+//shows how to iterate through a hash table in C++
 
+
+int main() {
+    
+    unordered_map<string, string> spnumbers;
+
+    spnumbers = { {"one","uno"},{"two","dos"},{"three","tres"},{"four","cuatro"},{"five","cinco"} };
+
+    for (auto i=spnumbers.begin(); i!=spnumbers.end(); i++ ){
+        cout << i->first << ":";
+        cout << i->second << endl;
+    }
 }
