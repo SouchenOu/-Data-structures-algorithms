@@ -245,3 +245,8 @@ empty() tests to see whether the stack is empty. It needs no parameters and retu
 size() returns the number of items on the stack. It needs no parameters and returns an integer.
 
 For example, if s is a stack that has been created and starts out empty, then Table 1 shows the results of a sequence of stack operations. Under stack contents, the top item is listed at the far right.
+    
+    
+    <img width="883" alt="Screen Shot 2023-01-07 at 11 47 32 AM" src="https://user-images.githubusercontent.com/87101785/211146453-d782a261-0692-4a9f-8e24-0837863556e7.png">
+
+    
