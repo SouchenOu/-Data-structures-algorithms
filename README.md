@@ -292,3 +292,12 @@ The following stack implementation (ActiveCode 1) assumes that the end of the ar
 
                                 return 0;
                         }
+    
+    
+                             Result:
+    
+                                Stack Empty? 0
+                                Stack Size: 3
+                                Top Element of the Stack: 15
+                                Top Element of the Stack: 8
+                                Stack Size: 2
