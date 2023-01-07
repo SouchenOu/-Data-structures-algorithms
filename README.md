@@ -221,6 +221,7 @@ The base of the stack is significant since items stored in the stack that are cl
 Many examples of stacks occur in everyday situations. Almost any cafeteria has a stack of trays or plates where you take the one at the top, uncovering a new tray or plate for the next customer in line. Imagine a stack of books on a desk (Figure 1). The only book whose cover is visible is the one on top. To access others in the stack, we need to remove the ones that are sitting on top of them. Figure 2 shows another stack.
 
    
+
     <img width="883" alt="Screen Shot 2023-01-07 at 11 38 31 AM" src="https://user-images.githubusercontent.com/87101785/211146218-aacc13b3-df14-4e9c-a49b-2ea5b95ca7dd.png">
 
     
