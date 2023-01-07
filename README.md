@@ -248,5 +248,47 @@ For example, if s is a stack that has been created and starts out empty, then Ta
     
     
     <img width="883" alt="Screen Shot 2023-01-07 at 11 47 32 AM" src="https://user-images.githubusercontent.com/87101785/211146453-d782a261-0692-4a9f-8e24-0837863556e7.png">
-
     
+    
+    1.3:Using a Stack in C++:
+    -----------------------
+    
+    Now that we have clearly defined the stack as an abstract data type we will turn our attention to using a stack with the help of the Standard Template Library (STL) in C++. Recall that when we give an abstract data type a physical implementation we refer to the implementation as a data structure.
+
+As we described in Chapter 1, in C++, as in any object-oriented programming language, the implementation of choice for an abstract data type such as a stack is the creation of a new class. The stack operations are implemented as methods. However, the STL already has a well written implementation of the Stack class.
+
+The following stack implementation (ActiveCode 1) assumes that the end of the array will hold the top element of the stack. As the stack grows (as push operations occur), new items will be added on the end of the array. pop operations will manipulate that same end.
+
+                //Tests the push, empty, size, pop, and top methods of the stack library.
+
+                
+                        #include <iostream>
+                        #include <stack>    // Calling Stack from the STL
+
+                        using namespace std;
+
+                        int main() 
+                        {
+                             stack<int> newStack;
+                             newStack.push(3); //Adds 3 to the stack
+                             newStack.push(8);
+                             newStack.push(15);
+
+                             // returns a boolean response depending on if the stack is empty or not
+                             cout << "Stack Empty? " << newStack.empty() << endl;
+
+                            // returns the size of the stack itself
+                             cout << "Stack Size: " << newStack.size() << endl;
+
+                           // returns the topmost element of the stack
+                            cout << "Top Element of the Stack: " << newStack.top() << endl;
+
+                          // removes the topmost element of the stack
+                            newStack.pop();
+
+                            cout << "Top Element of the Stack: " << newStack.top() << endl;
+
+                            cout << "Stack Size: " << newStack.size() << endl;
+
+                            return 0;
+                       }
