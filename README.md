@@ -226,4 +226,22 @@ Many examples of stacks occur in everyday situations. Almost any cafeteria has a
 <img width="883" alt="Screen Shot 2023-01-07 at 11 38 31 AM" src="https://user-images.githubusercontent.com/87101785/211146237-c6cc66ba-49c8-4cd8-acc5-cc7062e80d26.png">
 
     
+    1.2:The Stack Abstract Data Type:
+    --------------------------------
     
+    
+    The stack abstract data type is defined by the following structure and operations. A stack is structured, as described above, as an ordered collection of items where items are added to and removed from the end called the “top.” Stacks are ordered LIFO. The stack operations are given below.
+
+stack<datatype> creates a new stack that is empty. It needs no parameters and returns an empty stack. It can only contain a certain type of data. e.g. int, string etc.
+
+push(item) adds a new item to the top of the stack. It needs the item and returns nothing.
+
+pop() removes the top item from the stack. It needs no parameters and returns nothing. The stack is modified.
+
+top() returns the top item from the stack but does not remove it. It needs no parameters. The stack is not modified.
+
+empty() tests to see whether the stack is empty. It needs no parameters and returns a Boolean value.
+
+size() returns the number of items on the stack. It needs no parameters and returns an integer.
+
+For example, if s is a stack that has been created and starts out empty, then Table 1 shows the results of a sequence of stack operations. Under stack contents, the top item is listed at the far right.
