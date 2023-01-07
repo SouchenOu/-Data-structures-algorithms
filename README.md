@@ -274,16 +274,16 @@ The following stack implementation (ActiveCode 1) assumes that the end of the ar
                                 newStack.push(8);
                                 newStack.push(15);
 
-                             // returns a boolean response depending on if the stack is empty or not
+                                 // returns a boolean response depending on if the stack is empty or not
                                 cout << "Stack Empty? " << newStack.empty() << endl;
 
-                            // returns the size of the stack itself
+                                // returns the size of the stack itself
                                 cout << "Stack Size: " << newStack.size() << endl;
 
-                           // returns the topmost element of the stack
+                                // returns the topmost element of the stack
                                 cout << "Top Element of the Stack: " << newStack.top() << endl;
 
-                          // removes the topmost element of the stack
+                                // removes the topmost element of the stack
                                 newStack.pop();
 
                                 cout << "Top Element of the Stack: " << newStack.top() << endl;
@@ -291,4 +291,4 @@ The following stack implementation (ActiveCode 1) assumes that the end of the ar
                                 cout << "Stack Size: " << newStack.size() << endl;
 
                                 return 0;
-                       }
+                        }
