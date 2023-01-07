@@ -301,3 +301,16 @@ The following stack implementation (ActiveCode 1) assumes that the end of the ar
                                 Top Element of the Stack: 15
                                 Top Element of the Stack: 8
                                 Stack Size: 2
+                                
+                  
+                  
+ Infix, Prefix and Postfix Expressions:
+ ------------------------------------------
+ 
+ 2.2: Conversion of Infix Expressions to Prefix and Postfix
+ 
+ 
+     <img width="883" alt="Screen Shot 2023-01-07 at 2 42 49 PM" src="https://user-images.githubusercontent.com/87101785/211153771-106814a1-610f-4b79-aa5f-e6e3b5b18d66.png">
+
+     
+     
