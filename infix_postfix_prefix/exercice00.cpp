@@ -41,9 +41,9 @@ string infixToPostfix(string infixexpr) {
         else if (letsnums.find(token)<=letsnums.length()) //finds if the token is inside of letsnums
         { 
             // here in postfixvector we find just alpha and number that is exist in our infixExpr
-            postfixVector.emplace_back(token); // appends to the end of the container.
+            postfixVector.__emplace_back(token); // appends to the end of the container.
         } 
-        else if (token == '(') 
+       /* else if (token == '(') 
         {
             opStack.push(token);
         } 
@@ -54,7 +54,7 @@ string infixToPostfix(string infixexpr) {
             opStack.pop();
             while (topToken != '(') 
             {
-                postfixVector.emplace_back(topToken);
+                postfixVector.__emplace_back(topToken);
                 topToken=opStack.top();
                 opStack.pop();
             }
@@ -65,23 +65,22 @@ string infixToPostfix(string infixexpr) {
                                                                            //the top item of the stack is on a
                                                                            //higher level of PEMDAS than token.
             {
-                postfixVector.emplace_back(opStack.top());
+                postfixVector.__emplace_back(opStack.top());
                 opStack.pop();
             }
             opStack.push(token);
-        }
+        }*/
 
-        /*for(int i = 0; i < postfixVector.size();i++)
+        for(int i = 0; i < postfixVector.size();i++)
         {
-            cout << postfixVector.at(i) << "\n";
+            cout << "here "<<postfixVector.at(i) << "\n";
         }
-        break ;*/
-
+        break ;
     }
-    while (!opStack.empty()) {
-        postfixVector.emplace_back(opStack.top());
+   /* while (!opStack.empty()) {
+        postfixVector.__emplace_back(opStack.top());
         opStack.pop();
-    }
+    }*/
 
     string s(postfixVector.begin(),postfixVector.end());
 
