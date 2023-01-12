@@ -17,11 +17,11 @@ int main()
     vect.push_back("Pink");
 
 
-    while(vect[0][i] != '\0')
+    while(vect[i][0] != '\0')
     {
-         if(vect[0][i] > 'a' && vect[0][i] < 'z')
+         if(vect[i][0] > 'a' && vect[i][0] < 'z')
          {
-            vect[0][i] = vect[0][i] - 32;
+            vect[i][0] = vect[i][0] - 32;
          }
          i++;
     }
