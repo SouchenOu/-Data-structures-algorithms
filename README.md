@@ -211,8 +211,8 @@ These variations give rise to some of the most useful data structures in compute
     
     
     
-    1.1: What is a Stack?
-    --------------------
+ 1: Stack?
+  --------------------
     
 A stack (sometimes called a “push-down stack”) is an ordered collection of items where the addition of new items and the removal of existing items always takes place at the same end. This end is commonly referred to as the “top.” The end opposite the top is known as the “base.”
 
@@ -226,7 +226,7 @@ Many examples of stacks occur in everyday situations. Almost any cafeteria has a
 <img width="883" alt="Screen Shot 2023-01-07 at 11 38 31 AM" src="https://user-images.githubusercontent.com/87101785/211146237-c6cc66ba-49c8-4cd8-acc5-cc7062e80d26.png">
 
     
-    1.2:The Stack Abstract Data Type:
+    1.1:The Stack Abstract Data Type:
     --------------------------------
     
     
@@ -249,7 +249,7 @@ For example, if s is a stack that has been created and starts out empty, then Ta
 <img width="883" alt="Screen Shot 2023-01-07 at 11 47 32 AM" src="https://user-images.githubusercontent.com/87101785/211146453-d782a261-0692-4a9f-8e24-0837863556e7.png">
     
     
-    1.3:Using a Stack in C++:
+    1.2:Using a Stack in C++:
     -----------------------
     
     Now that we have clearly defined the stack as an abstract data type we will turn our attention to using a stack with the help of the Standard Template Library (STL) in C++. Recall that when we give an abstract data type a physical implementation we refer to the implementation as a data structure.
@@ -303,13 +303,28 @@ The following stack implementation (ActiveCode 1) assumes that the end of the ar
                                 
                   
                   
- Infix, Prefix and Postfix Expressions:
+ 1.3: Infix, Prefix and Postfix Expressions:
  ------------------------------------------
  
- 2.2: Conversion of Infix Expressions to Prefix and Postfix
+Conversion of Infix Expressions to Prefix and Postfix
  
  
 <img width="883" alt="Screen Shot 2023-01-07 at 2 42 49 PM" src="https://user-images.githubusercontent.com/87101785/211153771-106814a1-610f-4b79-aa5f-e6e3b5b18d66.png">
+
+2: Vector in C++ STL:
+--------------------
+
+Vectors are the same as dynamic arrays with the ability to resize itself automatically when an element is inserted or deleted, with their storage being handled automatically by the container. Vector elements are placed in contiguous storage so that they can be accessed and traversed using iterators. In vectors, data is inserted at the end. Inserting at the end takes differential time, as sometimes the array may need to be extended. Removing the last element takes only constant time because no resizing happens. Inserting and erasing at the beginning or in the middle is linear in time.
+
+1: begin() – Returns an iterator pointing to the first element in the vector
+2: end() – Returns an iterator pointing to the theoretical element that follows the last element in the vector
+3: rbegin() – Returns a reverse iterator pointing to the last element in the vector (reverse beginning). It moves from last to first element
+4: rend() – Returns a reverse iterator pointing to the theoretical element preceding the first element in the vector (considered as reverse end)
+5: cbegin() – Returns a constant iterator pointing to the first element in the vector.
+6: cend() – Returns a constant iterator pointing to the theoretical element that follows the last element in the vector.
+7: crbegin() – Returns a constant reverse iterator pointing to the last element in the vector (reverse beginning). It moves from last to first element
+8: crend() – Returns a constant reverse iterator pointing to the theoretical element preceding the first element in the vector (considered as reverse end)
+
 
      
      
