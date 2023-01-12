@@ -6,11 +6,12 @@ using namespace std;
   
 /* A simple stack class with 
 basic stack functionalities */
-class Stack {
-private:
-    static const int max = 100;
-    int arr[max];
-    int top;
+class Stack 
+{
+    private:
+        static const int max = 100;
+        int arr[max];
+        int top;
   
 public:
     Stack() { top = -1; }
@@ -74,10 +75,10 @@ elements */
 class SpecialStack : public Stack {
     Stack min;
   
-public:
-    int pop();
-    void push(int x);
-    int getMin();
+    public:
+        int pop();
+        void push(int x);
+        int getMin();
 };
   
 /* SpecialStack's member method to insert
