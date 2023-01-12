@@ -317,13 +317,35 @@ Conversion of Infix Expressions to Prefix and Postfix
 Vectors are the same as dynamic arrays with the ability to resize itself automatically when an element is inserted or deleted, with their storage being handled automatically by the container. Vector elements are placed in contiguous storage so that they can be accessed and traversed using iterators. In vectors, data is inserted at the end. Inserting at the end takes differential time, as sometimes the array may need to be extended. Removing the last element takes only constant time because no resizing happens. Inserting and erasing at the beginning or in the middle is linear in time.
 
 1: begin() – Returns an iterator pointing to the first element in the vector
+    
 2: end() – Returns an iterator pointing to the theoretical element that follows the last element in the vector
+    
 3: rbegin() – Returns a reverse iterator pointing to the last element in the vector (reverse beginning). It moves from last to first element
+    
 4: rend() – Returns a reverse iterator pointing to the theoretical element preceding the first element in the vector (considered as reverse end)
+    
 5: cbegin() – Returns a constant iterator pointing to the first element in the vector.
+    
 6: cend() – Returns a constant iterator pointing to the theoretical element that follows the last element in the vector.
+    
 7: crbegin() – Returns a constant reverse iterator pointing to the last element in the vector (reverse beginning). It moves from last to first element
-8: crend() – Returns a constant reverse iterator pointing to the theoretical element preceding the first element in the vector (considered as reverse end)
+    
+8: crend() – Returns a constant reverse iterator pointing to the theoretical element preceding the first element in the vector (considered as reverse 
+    end)
+9: size() – Returns the number of elements in the vector.
+    
+10:max_size() – Returns the maximum number of elements that the vector can hold.
+    
+11:capacity() – Returns the size of the storage space currently allocated to the vector expressed as number of elements.
+    
+12:resize(n) – Resizes the container so that it contains ‘n’ elements.
+    
+13:empty() – Returns whether the container is empty.
+    
+14:shrink_to_fit() – Reduces the capacity of the container to fit its size and destroys all elements beyond the capacity.
+    
+15:reserve() – Requests that the vector capacity be at least enough to contain n elements.
+
 
 
      
