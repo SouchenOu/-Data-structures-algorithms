@@ -345,6 +345,24 @@ Vectors are the same as dynamic arrays with the ability to resize itself automat
 14:shrink_to_fit() – Reduces the capacity of the container to fit its size and destroys all elements beyond the capacity.
     
 15:reserve() – Requests that the vector capacity be at least enough to contain n elements.
+    
+16: assign() – It assigns new value to the vector elements by replacing old ones
+    
+17: push_back() – It push the elements into a vector from the back
+    
+18: pop_back() – It is used to pop or remove elements from a vector from the back.
+    
+19: insert() – It inserts new elements before the element at the specified position
+    
+20: erase() – It is used to remove elements from a container from the specified position or range.
+    
+21: swap() – It is used to swap the contents of one vector with another vector of same type. Sizes may differ.
+    
+22: clear() – It is used to remove all the elements of the vector container
+    
+23: emplace() – It extends the container by inserting new element at position
+    
+24: emplace_back() – It is used to insert a new element into the vector container, the new element is added to the end of the vector
 
 
 
