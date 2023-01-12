@@ -357,7 +357,7 @@ Vectors are the same as dynamic arrays with the ability to resize itself automat
 20: erase() – It is used to remove elements from a container from the specified position or range.
     
 21: swap() – It is used to swap the contents of one vector with another vector of same type. Sizes may differ.
-    
+
 22: clear() – It is used to remove all the elements of the vector container
     
 23: emplace() – It extends the container by inserting new element at position
@@ -365,6 +365,7 @@ Vectors are the same as dynamic arrays with the ability to resize itself automat
 24: emplace_back() – It is used to insert a new element into the vector container, the new element is added to the end of the vector
 
 
+<img width="1451" alt="Screen Shot 2023-01-12 at 4 41 54 PM" src="https://user-images.githubusercontent.com/87101785/212112452-ddd9534a-02fe-4740-ba5c-2b97610605fe.png">
 
      
      
