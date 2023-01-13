@@ -380,5 +380,18 @@ An iterator is an object that can iterate over elements in a C++ Standard Librar
      
 An iterator is an object (like a pointer) that points to an element inside the container. We can use iterators to move through the contents of the container. They can be visualized as something similar to a pointer pointing to some location and we can access the content at that particular location using them. 
      
+    
+    
+    the functionality of the iterators, they can be classified into five major categories:
+
+1:Input Iterators: They are the weakest of all the iterators and have very limited functionality. They can only be used in a single-pass algorithms, i.e., those algorithms which process the container sequentially, such that no element is accessed more than once.
+    
+2:Output Iterators: Just like input iterators, they are also very limited in their functionality and can only be used in single-pass algorithm, but not for accessing elements, but for being assigned elements.
+    
+3:Forward Iterator: They are higher in the hierarchy than input and output iterators, and contain all the features present in these two iterators. But, as the name suggests, they also can only move in a forward direction and that too one step at a time.
+    
+4:Bidirectional Iterators: They have all the features of forward iterators along with the fact that they overcome the drawback of forward iterators, as they can move in both the directions, that is why their name is bidirectional.
+    
+5:Random-Access Iterators: They are the most powerful iterators. They are not limited to moving sequentially, as their name suggests, they can randomly access any element inside the container. They are the ones whose functionality are same as pointers.
      
 <img width="1516" alt="Screen Shot 2023-01-13 at 2 34 38 PM" src="https://user-images.githubusercontent.com/87101785/212332178-2bc264a4-ef87-4e6c-9b68-41eaf39fe5ba.png">
