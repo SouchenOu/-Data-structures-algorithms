@@ -368,4 +368,10 @@ Vectors are the same as dynamic arrays with the ability to resize itself automat
 <img width="1451" alt="Screen Shot 2023-01-12 at 4 41 54 PM" src="https://user-images.githubusercontent.com/87101785/212112452-ddd9534a-02fe-4740-ba5c-2b97610605fe.png">
 
      
+     Iterators:
+     ----------
+     
+     An iterator is an object that can iterate over elements in a C++ Standard Library container and provide access to individual elements. The C++ Standard Library containers all provide iterators so that algorithms can access their elements in a standard way without having to be concerned with the type of container the elements are stored in.
+     
+     An iterator is an object (like a pointer) that points to an element inside the container. We can use iterators to move through the contents of the container. They can be visualized as something similar to a pointer pointing to some location and we can access the content at that particular location using them. 
      
