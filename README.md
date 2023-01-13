@@ -380,3 +380,5 @@ An iterator is an object that can iterate over elements in a C++ Standard Librar
      
 An iterator is an object (like a pointer) that points to an element inside the container. We can use iterators to move through the contents of the container. They can be visualized as something similar to a pointer pointing to some location and we can access the content at that particular location using them. 
      
+     
+<img width="1516" alt="Screen Shot 2023-01-13 at 2 34 38 PM" src="https://user-images.githubusercontent.com/87101785/212332178-2bc264a4-ef87-4e6c-9b68-41eaf39fe5ba.png">
