@@ -395,3 +395,10 @@ An iterator is an object (like a pointer) that points to an element inside the c
 5:Random-Access Iterators: They are the most powerful iterators. They are not limited to moving sequentially, as their name suggests, they can randomly access any element inside the container. They are the ones whose functionality are same as pointers.
      
 <img width="1516" alt="Screen Shot 2023-01-13 at 2 34 38 PM" src="https://user-images.githubusercontent.com/87101785/212332178-2bc264a4-ef87-4e6c-9b68-41eaf39fe5ba.png">
+
+
+
+Default allocater:
+------------------
+
+Allocators are classes that define memory models to be used by some parts of the Standard Library, and most specifically, by STL containers.
