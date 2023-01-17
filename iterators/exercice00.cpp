@@ -6,20 +6,20 @@ using namespace std;
 
 int main()
 {
-    std::vector<int> value = {1,2,3,4,5};
+    std::vector<int> value1 = {1,2,3,4,5};
     cout << "First method\n";
-    for(int i = 0; i < value.size(); i++)
+    for(int i = 0; i < value1.size(); i++)
     {
-        cout << value[i] << "\n";
+        cout << value1[i] << "\n";
     }
     cout << "Second method\n";
-    for(int i : value)
+    for(int i : value1)
     {
         cout << i << "\n";
     }
     cout << "Third method\n";
 
-    for (vector<int>::iterator it= value.begin(); it != value.end(); it++)
+    for (vector<int>::iterator it= value1.begin(); it != value1.end(); it++)
     {
         cout << *it << "\n";
     }
@@ -33,15 +33,15 @@ int main()
  for(std::unordered_map<std::string, int> ::const_iterator t = map.begin(); t != map.end();t++)
  {  
     auto& key = t->first;
-    auto& value = t->second;
-    cout << key << " == " << value << "\n";
+    auto& value1 = t->second;
+    cout << key << " == " << value1 << "\n";
 
  }
  cout << "Other method\n";
 
- for(auto [key, value] : map)
+ for(auto [key, value1] : map)
  {
-    cout << key << " == " << "value" << "\n";
+    cout << key << " == " << "value1" << "\n";
  }
  
 
