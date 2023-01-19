@@ -18,6 +18,7 @@ int main()
     // add new element
     vect.push_back(23);
     vect.push_back(24);
+    vect.allocate(100);
 
     // After updating
 
