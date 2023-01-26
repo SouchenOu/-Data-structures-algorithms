@@ -8,8 +8,20 @@ int main ()
   std::vector<int> vect2;
   std::vector<int> vect3;
 
-  vect1.assign (7,100);             // 7 ints with a value of 100
+vect1.push_back(1);
+vect1.push_back(2);
+vect1.push_back(3);
+vect1.push_back(1);
+vect1.push_back(2);
+vect1.push_back(3);
+vect1.push_back(1);
+vect1.push_back(2);
+vect1.push_back(3);
 
+cout << "befaure assign the capacity will change or not :" << vect1.capacity() << endl;
+  vect1.assign (3,100);             // 7 ints with a value of 100
+  //vect1.reserve(20);
+    cout << "After assign the capacity will change or not :" << vect1.capacity() << endl;
   std::vector<int>::iterator it;
   it=vect1.begin()+ 1;
 
@@ -33,6 +45,7 @@ int main ()
     {
         cout << vect3[k] << endl;
     }
+
 
 
 
