@@ -22,18 +22,18 @@ struct Node
 // Class to represent Red-Black Tree
 class RBTree
 {
-private:
-    Node *root;
-protected:
-    void rotateLeft(Node *&, Node *&);
-    void rotateRight(Node *&, Node *&);
-    void fixViolation(Node *&, Node *&);
-public:
-    // Constructor
-    RBTree() { root = NULL; }
-    void insert(const int &n);
-    void inorder();
-    void levelOrder();
+    private:
+        Node *root;
+    protected:
+        void rotateLeft(Node *&, Node *&);
+        void rotateRight(Node *&, Node *&);
+        void fix_BST_to_redblacktree(Node *&, Node *&);
+    public:
+        // Constructor
+        RBTree() { root = NULL; }
+        void insert(const int &n);
+        void inorder();
+        void levelOrder();
 };
  
 // A recursive function to do inorder traversal
@@ -108,10 +108,10 @@ void RBTree::rotateLeft(Node *&root, Node *&pt)
  
     if (pt->parent == NULL)
         root = pt_right;
- 
+        // here au cas ou left and right
     else if (pt == pt->parent->left)
         pt->parent->left = pt_right;
- 
+    // here au cas ou right and right
     else
         pt->parent->right = pt_right;
  
@@ -145,7 +145,7 @@ void RBTree::rotateRight(Node *&root, Node *&pt)
  
 // This function fixes violations
 // caused by BST insertion
-void RBTree::fixViolation(Node *&root, Node *&pt)
+void RBTree::fix_BST_to_redblacktree(Node *&root, Node *&pt)
 {
     Node *parent_pt = NULL;
     Node *grand_parent_pt = NULL;
@@ -247,12 +247,15 @@ void RBTree::fixViolation(Node *&root, Node *&pt)
 void RBTree::insert(const int &data)
 {
     Node *pt = new Node(data);
+    // this pt is a new element 
+    // * have data, color, left, right and parent
  
     // Do a normal BST insert
+    //root also have a data, color, left, right and parent
     root = BSTInsert(root, pt);
  
     // fix Red Black Tree violations
-    fixViolation(root, pt);
+    fix_BST_to_redblacktree(root, pt);
 }
  
 // Function to do inorder and level order traversals
