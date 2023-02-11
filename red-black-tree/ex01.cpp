@@ -193,8 +193,7 @@ void RBTree::fix_BST_to_redblacktree(Node *&root, Node *&pt)
                    pt is left child of its parent
                    Right-rotation required */
                 rotateRight(root, grand_parent_pt);
-                swap(parent_pt->color,
-                           grand_parent_pt->color);
+                swap(parent_pt->color,grand_parent_pt->color);
                 pt = parent_pt;
             }
         }
