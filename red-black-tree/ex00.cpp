@@ -1,4 +1,3 @@
-// Implementing Red-Black Tree in C++
 
 #include <iostream>
 using namespace std;
@@ -68,20 +67,29 @@ class RedBlackTree {
   void deleteFix(NodePtr x) {
     NodePtr s;
     while (x != root && x->color == 0) {
-      if (x == x->parent->left) {
+      if (x == x->parent->left) 
+      {
         s = x->parent->right;
-        if (s->color == 1) {
+        if (s->color == 1) 
+        {
+          cout << "her1\n";
           s->color = 0;
           x->parent->color = 1;
           leftRotate(x->parent);
           s = x->parent->right;
         }
 
-        if (s->left->color == 0 && s->right->color == 0) {
+        if (s->left->color == 0 && s->right->color == 0) 
+        {
+          cout << "here2\n";
           s->color = 1;
           x = x->parent;
-        } else {
-          if (s->right->color == 0) {
+        } 
+        else 
+        {
+          if (s->right->color == 0) 
+          {
+            cout << "here3\n";
             s->left->color = 0;
             s->color = 1;
             rightRotate(s);
@@ -93,10 +101,13 @@ class RedBlackTree {
           s->right->color = 0;
           leftRotate(x->parent);
           x = root;
-        }
-      } else {
+      }
+      } 
+      else 
+      {
         s = x->parent->left;
         if (s->color == 1) {
+          cout << "here4\n";
           s->color = 0;
           x->parent->color = 1;
           rightRotate(x->parent);
@@ -104,10 +115,12 @@ class RedBlackTree {
         }
 
         if (s->right->color == 0 && s->right->color == 0) {
+          cout << "here6\n";
           s->color = 1;
           x = x->parent;
         } else {
           if (s->left->color == 0) {
+            cout << "here7\n";
             s->right->color = 0;
             s->color = 1;
             leftRotate(s);
@@ -140,6 +153,7 @@ class RedBlackTree {
     NodePtr z = TNULL;
     NodePtr x, y;
     while (node != TNULL) {
+      // root node
       if (node->data == key) {
         z = node;
       }
@@ -158,32 +172,33 @@ class RedBlackTree {
 
     y = z;
     int y_original_color = y->color;
-    if (z->left == TNULL) {
-      x = z->right;
-      rbTransplant(z, z->right);
+    if (z->left == TNULL) 
+    {
+        x = z->right;
+        rbTransplant(z, z->right);
     } else if (z->right == TNULL) {
-      x = z->left;
-      rbTransplant(z, z->left);
+        x = z->left;
+        rbTransplant(z, z->left);
     } else {
-      y = minimum(z->right);
-      y_original_color = y->color;
-      x = y->right;
-      if (y->parent == z) {
-        x->parent = y;
-      } else {
-        rbTransplant(y, y->right);
-        y->right = z->right;
-        y->right->parent = y;
-      }
+        y = minimum(z->right);
+        y_original_color = y->color;
+        x = y->right;
+        if (y->parent == z) {
+          x->parent = y;
+        } else {
+          rbTransplant(y, y->right);
+          y->right = z->right;
+          y->right->parent = y;
+        }
 
-      rbTransplant(z, y);
-      y->left = z->left;
-      y->left->parent = y;
-      y->color = z->color;
+        rbTransplant(z, y);
+        y->left = z->left;
+        y->left->parent = y;
+        y->color = z->color;
     }
     delete z;
     if (y_original_color == 0) {
-      deleteFix(x);
+        deleteFix(x);
     }
   }
 
@@ -233,17 +248,18 @@ class RedBlackTree {
   }
 
   void printHelper(NodePtr root, string indent, bool last) {
-    if (root != TNULL) {
+    if (root != TNULL) 
+    {
       cout << indent;
-      if (last) {
+      if (last == 1) {
         cout << "R----";
         indent += "   ";
-      } else {
+      } else if(last == 0) {
         cout << "L----";
         indent += "|  ";
       }
 
-      string sColor = root->color ? "RED" : "BLACK";
+      string sColor = (root->color == 1) ? "RED" : "BLACK";
       cout << root->data << "(" << sColor << ")" << endl;
       printHelper(root->left, indent, false);
       printHelper(root->right, indent, true);
