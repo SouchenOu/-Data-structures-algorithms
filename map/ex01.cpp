@@ -8,6 +8,7 @@ int main()
  
     // initialize container
     map<int, int> mp;
+    map<int, int>::iterator i;
  
     // insert elements in random order
     mp.insert({ 2, 30 });
@@ -23,5 +24,6 @@ int main()
     for (auto itr = mp.begin(); itr != mp.end(); ++itr) {
         cout << itr->first << '\t' << itr->second << '\n';
     }
+
     return 0;
 }

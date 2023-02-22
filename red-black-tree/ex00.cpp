@@ -142,11 +142,14 @@ class RedBlackTree {
     if (u->parent == nullptr) {
       root = v;
     } else if (u == u->parent->left) {
+      cout << "test1\n";
       u->parent->left = v;
     } else {
+      cout << "test2\n";
       u->parent->right = v;
     }
     v->parent = u->parent;
+    cout << "finish balance\n";
   }
 
   void deleteNodeHelper(NodePtr node, int key) {
@@ -174,18 +177,22 @@ class RedBlackTree {
     int y_original_color = y->color;
     if (z->left == TNULL) 
     {
+      cout << "here1\n";
         x = z->right;
         rbTransplant(z, z->right);
     } else if (z->right == TNULL) {
+            cout << "here2\n";
         x = z->left;
         rbTransplant(z, z->left);
     } else {
+            cout << "here3\n";
         y = minimum(z->right);
         y_original_color = y->color;
         x = y->right;
         if (y->parent == z) {
           x->parent = y;
         } else {
+          cout << "here4\n";
           rbTransplant(y, y->right);
           y->right = z->right;
           y->right->parent = y;
@@ -408,6 +415,10 @@ class RedBlackTree {
     }
 
     insertFix(node);
+    cout << "after inserting\n";
+    cout << node->left->data <<"\n";
+    cout << node->right->data<<"\n";
+    cout << node->color << endl;
   }
 
   NodePtr getRoot() {

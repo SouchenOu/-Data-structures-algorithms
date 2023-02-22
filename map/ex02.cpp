@@ -21,8 +21,8 @@ int main()
      map1.insert(pair<int, int>(4, 500));
      
       map1[7]=10;     // another way of inserting a value in a map
-    map1.insert({100,200});
-     map1.insert({100,300});
+    // map1.insert({100,200});
+    //  map1.insert({100,300});
     
  
     // printing map map1
@@ -59,6 +59,12 @@ int main()
         std::cout << itr->first << "\t" << itr->second << "\n";
     }
 
+        // size():
+    cout << "Size and max_size of our map \n";
+    cout << "size of our map is :" << map1.size() << "\n";
+    cout << "Max size is :" << map1.max_size() << "\n";
+
+ 
 
     //upper bound and lower bound 
 
@@ -67,8 +73,18 @@ int main()
     cout << "Upper bound for key = 5\n";
 
     cout << "First ->"<<map1.upper_bound(5)->first << "\tSecond -->" << map1.upper_bound(5)->second << endl;
+    
+    cout << "Upper bound for key = 8 that is not exist\n";
+
+    cout << "First ->"<<map1.upper_bound(8)->first << "\tSecond -->" << map1.upper_bound(8)->second << endl;
+
+
 
     cout << "Lower bound for key = 5\n";
 
     cout << "First-->" << map1.lower_bound(5)->first << "\tSecond-->" << map1.lower_bound(5)->second << endl;
+
+    cout << "Lower bound for key = 8 that is not exist\n";
+
+    cout << "First-->" << map1.lower_bound(8)->first << "\tSecond-->" << map1.lower_bound(8)->second << endl;
 }

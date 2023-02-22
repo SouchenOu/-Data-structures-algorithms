@@ -6,6 +6,7 @@ using namespace std;
 int main()
 {
     std::map<std::string, int> map;
+    
 
     //insert map value
 

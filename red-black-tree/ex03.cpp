@@ -66,6 +66,7 @@ void RBtree::insert()
               q->left=t;
      }
      insertfix(t);
+     
 }
 void RBtree::insertfix(node *t)
 {
