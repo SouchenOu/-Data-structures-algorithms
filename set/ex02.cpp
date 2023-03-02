@@ -38,7 +38,7 @@ int main()
     cout << endl;
 
      // remove all elements up to 30 in s2
-    cout << "\ns2 after removal of elements less than 30 "
+    cout << "\n s2 after removal of elements less than 30"
             ":\n";
     s2.erase(s2.begin(), s2.find(30));
     for (itr = s2.begin(); itr != s2.end(); itr++) {
